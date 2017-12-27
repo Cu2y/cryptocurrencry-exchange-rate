@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Options :: Crypto Currency Exchange Rate</title>
+  </head>
+  <style type="text/css">
+  body {
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    font-size: 13px;
+  }
+  input[type=number] {
+    width: 60px;
+  }
+  input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  td:first-child {
+    width: 130px;
+  }
+  select {
+    width: 120px;
+  }
+  </style>
+  <body>
+    <table width=100%>
+      <tr>
+        <td>Display badge text</td>
+        <td><input type="checkbox" id="badge"></td>
+      </tr>
+      <tr>
+        <td>Badge color (goes up)</td>
+        <td><input type="color" id="color-up"></td>
+      </tr>
+      <tr>
+        <td>Badge color (goes down)</td>
+        <td><input type="color" id="color-down"></td>
+      </tr>
+      <tr>
+        <td>Badge decimals</td>
+        <td><input type="number" id="decimals" min=0></td>
+      </tr>
+      <tr>
+        <td>Use human readable format</td>
+        <td><input type="checkbox" id="readable"></td>
+      </tr>
+      <tr>
+        <td>Exchange rate</td>
+        <td>
+          <div style="display: flex; align-items: center">
+            <select id="base" style="flex: 1;">
+              <optgroup label="Fiat money" data-id="fiat"></optgroup>
+              <optgroup label="Popular currencies" data-id="populars"></optgroup>
+              <optgroup label="Other currencies" data-id="others"></optgroup>
+            </select>
+            &nbsp;to&nbsp;
+            <select id="target" style="flex: 1;">
+              <optgroup label="Fiat money" data-id="fiat"></optgroup>
+              <optgroup label="Popular currencies" data-id="populars"></optgroup>
+              <optgroup label="Other currencies" data-id="others"></optgroup>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Update interval (in minutes)</td>
+        <td><input type="number" id="period" min="5"></td>
+      </tr>
+      <tr>
+        <td>Left-click action</td>
+        <td><input type="text" id="url"></td>
+      </tr>
+    </table>
+    <p>
+      <input type="button" id="support" value="Support Development">
+      <input type="button" id="save" value="Save">
+      <span id="info"></span>
+    </p>
+    <script src="index.js"></script>
+  </body>
+</html>
